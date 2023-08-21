@@ -3,7 +3,7 @@
 <footer>Test</footer> -->
 
 <style>
-	h1 {
+	/* h1 {
 		margin: 0 auto;
 		text-align: center;
 	}
@@ -17,5 +17,5 @@
 		font-size: 1rem;
 		color: #f2edeb;
 		padding: 10px 0;
-	}
+	} */
 </style>
