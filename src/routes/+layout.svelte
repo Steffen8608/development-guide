@@ -1,21 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
-	import { signOut } from 'firebase/auth';
-	import { firebaseAuth } from '$lib/utils/firebase';
 	import { authUser } from '$lib/stores/auth.store';
 	import Analytics from '$lib/components/Analytics.svelte';
-
-	const handleLogout = () => {
-		signOut(firebaseAuth)
-			.then(() => {
-				$authUser = undefined;
-				goto('/login');
-			})
-			.catch((error) => {
-				console.log(error);
-			});
-	};
+	import { handleLogout } from '$lib/utils/auth/handle-logout';
 </script>
 
 <Analytics />
