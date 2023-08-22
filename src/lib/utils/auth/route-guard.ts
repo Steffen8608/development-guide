@@ -3,6 +3,10 @@ import { redirect } from '@sveltejs/kit';
 
 export const routeGuard = authUser.subscribe((user) => {
 	if (!user) {
-		throw redirect(302, '/login');
+		try {
+			throw redirect(302, '/login');
+		} catch (error) {
+			console.log(error);
+		}
 	}
 });
