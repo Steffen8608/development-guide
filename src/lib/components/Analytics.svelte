@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	declare const gtag: Gtag.Gtag;
+	declare const gtag: any;
 </script>
 
 <script lang="ts">
