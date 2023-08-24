@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	declare const gtag: any;
+	declare const gtag: unknown;
 </script>
 
 <script lang="ts">
@@ -7,7 +7,7 @@
 	import { env } from '$env/dynamic/public';
 
 	$: {
-		if (typeof gtag !== 'undefined') {
+		if (typeof gtag === 'function') {
 			gtag('config', env.PUBLIC_MEASUREMENT_ID, {
 				page_title: document.title,
 				page_path: $page.url.pathname
