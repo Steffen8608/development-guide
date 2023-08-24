@@ -9,6 +9,8 @@ jobs:
   deploy:
     name: 'Deploy'
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_FIREBASE_API_KEY: ''
 
     steps:
       - name: Checkout
@@ -26,7 +28,6 @@ jobs:
       - name: Deploy to Netlify
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
-          PUBLIC_FIREBASE_API_KEY: ''
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           deploy_alias: ${{ steps.extract_branch.outputs.branch }}
