@@ -4,11 +4,10 @@
 
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { env } from '$env/dynamic/public';
 
 	$: {
-		if (typeof gtag === 'function') {
-			gtag('config', env.PUBLIC_MEASUREMENT_ID, {
+		if ('G-M88JMT8HF3' && typeof gtag === 'function') {
+			gtag('config', 'G-M88JMT8HF3', {
 				page_title: document.title,
 				page_path: $page.url.pathname
 			});
@@ -17,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<script async src={'https://www.googletagmanager.com/gtag/js?id=' + env.PUBLIC_MEASUREMENT_ID}>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M88JMT8HF3">
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -27,6 +26,6 @@
 		}
 
 		gtag('js', new Date());
-		gtag('config', env.PUBLIC_MEASUREMENT_ID);
+		gtag('config', 'G-M88JMT8HF3');
 	</script>
 </svelte:head>

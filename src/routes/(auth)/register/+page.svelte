@@ -1,27 +1,10 @@
 <script lang="ts">
-	import { goto } from '$app/navigation';
-
-	import { createUserWithEmailAndPassword } from 'firebase/auth';
-	import { firebaseAuth } from '$lib/utils/firebase';
+	import { register } from '$lib/utils/auth/register-with-main-pwd';
 
 	let email: string;
 	let password: string;
 
-	let success: boolean | undefined = undefined;
-
-	const register = () => {
-		createUserWithEmailAndPassword(firebaseAuth, email, password)
-			.then(() => {
-				goto('/login');
-			})
-			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
-				console.log(errorCode, errorMessage);
-
-				success = false;
-			});
-	};
+	let success: boolean | void = undefined;
 </script>
 
 <svelte:head>
@@ -32,7 +15,7 @@
 
 <form
 	class="flex flex-col gap-4 p-8 space-y-4 bg-white sm:w-10/12"
-	on:submit|preventDefault={register}
+	on:submit|preventDefault={() => {success = register(email,password)}}
 >
 	<input
 		type="email"
