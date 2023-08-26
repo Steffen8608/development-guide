@@ -5,13 +5,13 @@
 </script>
 
 <header />
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
 			<img src="https://placehold.co/480x84" alt="development.guide" width="160" height="28" />
 		</a>
 
-		<a
+		<span
 			role="button"
 			class="navbar-burger"
 			aria-label="menu"
@@ -21,25 +21,10 @@
 			<span aria-hidden="true" />
 			<span aria-hidden="true" />
 			<span aria-hidden="true" />
-		</a>
+		</span>
 	</div>
 
 	<div id="navbarBasicExample" class="navbar-menu">
-		<div class="navbar-start">
-			<a href="/" class="navbar-item">Home</a>
-			<a class="navbar-item"> Pricing </a>
-			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link"> More </a>
-				<div class="navbar-dropdown">
-					<a class="navbar-item"> About </a>
-					<a class="navbar-item"> Jobs </a>
-					<a class="navbar-item"> Contact </a>
-					<hr class="navbar-divider" />
-					<a class="navbar-item"> Report an issue </a>
-				</div>
-			</div>
-		</div>
-
 		<div class="navbar-end">
 			<div class="navbar-item">
 				<div class="buttons">

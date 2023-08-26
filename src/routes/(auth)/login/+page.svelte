@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logoGitHub from '$lib/assets/logo-github.svg';
+	import logoGoogle from '$lib/assets/logo-google.svg';
 	import { loginWithGitHub } from '$lib/utils/auth/login-with-github';
 	import { login } from '$lib/utils/auth/login-with-mail-pwd';
 
@@ -58,7 +59,7 @@
 							</div>
 						</div>
 
-						<button type="submit" class="button is-right is-primary" style="width: 100%;"
+						<button type="submit" class="mt-1 button is-right is-primary" style="width: 100%;"
 							>Login</button
 						>
 
@@ -85,6 +86,24 @@
 										}}
 									>
 										<img src={logoGitHub} alt="GitHub" width="30" height="30" />
+									</span>
+								</div>
+								<div class="column is-narrow">
+									<span
+										class="is-centered auth-provider-button"
+										role="button"
+										tabindex="0"
+										title="Log in with Google"
+										on:keypress={(e) => {
+											if (e.key === 'Enter') {
+												loginWithGitHub();
+											}
+										}}
+										on:click={() => {
+											loginWithGitHub();
+										}}
+									>
+										<img src={logoGoogle} alt="Google" width="30" height="30" />
 									</span>
 								</div>
 							</div>
