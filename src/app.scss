@@ -1,0 +1,30 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */ /* Import only what you need from Bulma */
+$family-primary: 'Custom Font', sans-serif;
+
+$primary: #943cbf;
+$dark: #1690bc;
+
+@import 'bulma/sass/utilities/_all';
+@import 'bulma/sass/base/_all';
+@import 'bulma/sass/elements/_all';
+@import 'bulma/sass/form/_all';
+@import 'bulma/sass/components/_all';
+@import 'bulma/sass/grid/_all';
+@import 'bulma/sass/helpers/_all';
+@import 'bulma/sass/layout/_all';
+@import '@creativebulma/bulma-divider';
+
+body {
+	background-color: #fff;
+	margin: 0;
+	color: oklch(33.48% 0.039 284.13);
+	font-family: 'CustomFont', sans-serif;
+}
+@font-face {
+	font-family: 'CustomFont';
+	src: url('$lib/assets/fonts/inter.ttf');
+}
+
+.navbar {
+	background-color: #fffff0;
+}

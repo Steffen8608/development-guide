@@ -25,6 +25,7 @@
 		"eslint-plugin-svelte": "^2.33.0",
 		"prettier": "^3.0.2",
 		"prettier-plugin-svelte": "^3.0.3",
+		"sass": "^1.63.6",
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"tslib": "^2.4.1",
@@ -35,5 +36,10 @@
 	"type": "module",
 	"volta": {
 		"node": "18.17.1"
+	},
+	"dependencies": {
+		"@creativebulma/bulma-divider": "^1.1.0",
+		"bulma": "^0.9.4",
+		"firebase": "^10.2.0"
 	}
 }
