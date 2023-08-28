@@ -6,7 +6,7 @@
 </script>
 
 <header>
-	<nav class="navbar" aria-label="main navigation">
+	<nav class="navbar container" aria-label="main navigation">
 		<div class="navbar-brand">
 			<a class="navbar-item mr-5 logo" href="/">
 				<img src={logo} alt="development.guide" width="60" height="60" />
@@ -81,6 +81,10 @@
 
 	.navbar-item .button:hover {
 		text-decoration: none;
+	}
+
+	header {
+		background: linear-gradient(180deg, #111a23, #050e19);
 	}
 
 	.navbar {

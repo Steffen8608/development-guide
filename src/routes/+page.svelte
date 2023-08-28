@@ -71,6 +71,6 @@
 
 <style>
 	:global(body) {
-		background: linear-gradient(180deg, #1690bc 4%, transparent 25%);
+		background: linear-gradient(180deg, #1690bc 20px, transparent 400px);
 	}
 </style>
